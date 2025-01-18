@@ -80,7 +80,12 @@ const Projects = () => {
   ];
 
   return (
-    <div id="studentProjects" className="student-projects-articles-section">
+    <div
+      id="studentProjects"
+      className="student-projects-articles-section"
+      n
+      style={{ marginTop: "5%" }}
+    >
       <div className="container">
         <h2 className="section-heading">
           <span className="color-primary">5.5 Million</span> Student Projects

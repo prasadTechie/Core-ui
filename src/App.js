@@ -20,7 +20,7 @@ const App = () => {
     <div className="App">
       <Navbar />
       <HeroSection />
-      <OurCourses />
+      {/* <OurCourses /> */}
       <MiniCraft />
       <Articles />
       <WhyCoding />

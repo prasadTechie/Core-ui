@@ -6603,7 +6603,8 @@ img {
     justify-content: flex-end;
     align-items: center;
     margin-bottom: 90px;
-    position: relative
+    position: relative;
+    margin-top: 33%;
 }
 
 @media only screen and (max-width:1300px) {
