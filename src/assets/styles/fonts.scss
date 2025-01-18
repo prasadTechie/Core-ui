@@ -1,0 +1,80 @@
+input, select {
+    font-size: 1.125rem;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    line-height: 3.5625rem;
+  }
+  
+  h2 {
+    font-size: 2.25rem;
+    line-height: 3rem;
+  }
+  
+  h3 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  h5 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  
+  h6 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+  
+  .font18 {
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+  }
+  
+  .font20 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+  
+  .font16 {
+    font-size: 1rem;
+    line-height: 1.125rem;
+  }
+  
+  .font14 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+  .font {
+    &46 {
+      font-size:2.875rem;
+    }
+  
+    &50 {
+      font-size: 3.125rem;
+    }
+    &24 {
+      font-size: 1.5rem;
+    }
+    &18 {
+      font-size: 1.125rem;
+    }
+  }
+  
+  .font {
+    &-futura {
+      &-normal {
+        font-family: 'FuturaPT', sans-serif;
+      }
+      &-bold {
+        font-family: 'FuturaPTBold', sans-serif;
+      }
+    }
+  }
+  

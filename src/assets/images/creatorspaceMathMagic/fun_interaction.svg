@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="173">
+    <defs>
+        <clipPath id="clip-path">
+            <path id="Rectangle_156" data-name="Rectangle 156" transform="translate(1269 1491)" style="fill:#fff;stroke:#707070" d="M0 0h210v173H0z"/>
+        </clipPath>
+        <style>
+            .cls-4{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px}
+        </style>
+    </defs>
+    <g id="fun_interaction" transform="translate(-1269 -1464)">
+        <g id="Mask_Group_21" data-name="Mask Group 21" transform="translate(0 -27)" style="clip-path:url(#clip-path)">
+            <g id="Group_269" data-name="Group 269" transform="translate(.22)">
+                <path id="Path_470" data-name="Path 470" d="M96.54-15.339c55.239 0 93.2 18.956 93.2 59.639s-41.156 101.3-96.4 101.3S-7.1 105.3-7.1 64.619 41.3-15.339 96.54-15.339z" transform="rotate(20.97 -3351.965 4284.042)" style="fill:#00b5ce"/>
+                <g id="Group_203" data-name="Group 203" transform="translate(1315.784 1540)">
+                    <g id="Group_196" data-name="Group 196" transform="translate(11.575 11.575)">
+                        <path id="Path_432" data-name="Path 432" class="cls-4" d="M772.6 1230H680a5.787 5.787 0 0 0 5.787 5.787h81.023a5.787 5.787 0 0 0 5.79-5.787z" transform="translate(-680 -1172.126)"/>
+                        <path id="Path_433" data-name="Path 433" class="cls-4" d="M765.788 830h-2.894a2.893 2.893 0 0 0-2.894 2.894V876.3h69.449" transform="translate(-748.425 -830)"/>
+                        <path id="Path_434" data-name="Path 434" class="cls-4" d="M761.023 1150h-69.448L680 1161.575h92.6z" transform="translate(-680 -1103.701)"/>
+                        <g id="Group_195" data-name="Group 195" transform="translate(11.575 52.086)">
+                            <path id="Line_9" data-name="Line 9" class="cls-4" transform="translate(68.002)" d="M1.447 0H0"/>
+                            <path id="Line_10" data-name="Line 10" transform="translate(4.987)" style="stroke-dasharray:19.574 48.936;fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px" d="M55.934 0H0"/>
+                            <path id="Line_11" data-name="Line 11" class="cls-4" d="M1.447 0H0"/>
+                        </g>
+                        <path id="Path_436" data-name="Path 436" class="cls-4" d="M823.661 830h2.894a2.894 2.894 0 0 1 2.894 2.894V876.3H760" transform="translate(-748.425 -830)"/>
+                    </g>
+                    <g id="Group_200" data-name="Group 200" transform="translate(34.724)">
+                        <g id="Group_198" data-name="Group 198">
+                            <circle id="Ellipse_20" data-name="Ellipse 20" cx="23.15" cy="23.15" style="stroke-dasharray:300 50 600;fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px" r="23.15"/>
+                            <g id="Group_197" data-name="Group 197" transform="translate(18.809 15.915)">
+                                <path id="Line_12" data-name="Line 12" class="cls-4" transform="translate(8.681)" d="M0 0v7.234"/>
+                                <path id="Line_13" data-name="Line 13" class="cls-4" d="M0 0v7.234"/>
+                            </g>
+                            <path id="Path_435" data-name="Path 435" class="cls-4" d="M946.4 947.712a15.433 15.433 0 0 1-21.826 0" transform="translate(-912.339 -919.106)"/>
+                        </g>
+                    </g>
+                    <g id="Group_201" data-name="Group 201" transform="translate(0 10.128)">
+                        <path id="Line_15" data-name="Line 15" class="cls-4" transform="translate(0 13.022)" d="M5.787 0H0"/>
+                        <path id="Line_16" data-name="Line 16" class="cls-4" transform="translate(6.383 24.596)" d="M2.506 0 0 1.447"/>
+                        <path id="Line_17" data-name="Line 17" class="cls-4" transform="translate(6.383)" d="M2.506 1.447 0 0"/>
+                    </g>
+                    <g id="Group_202" data-name="Group 202" transform="translate(106.859 10.128)">
+                        <path id="Line_18" data-name="Line 18" class="cls-4" transform="translate(3.101 13.022)" d="M0 0h5.787"/>
+                        <path id="Line_19" data-name="Line 19" class="cls-4" d="M0 1.447 2.506 0"/>
+                        <path id="Line_20" data-name="Line 20" class="cls-4" transform="translate(0 24.596)" d="m0 0 2.506 1.447"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

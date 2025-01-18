@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'FuturaPT';
+    src: url("../../font/FuturaPT.woff") format("woff");
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'FuturaPTMedium';
+    src: url("../../font/FuturaPTMedium.woff") format("woff");
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'FuturaPTBold';
+    src: url("../../font/FuturaPTBold.woff") format("woff");
+    font-display: swap;
+  }
+  
+  * {
+    letter-spacing: 0.0125rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+    margin: 0;
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+    font-weight: normal;
+    outline: none;
+  }
+  
+  html, body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+  }
+  
+  body, ::placeholder, input, select {
+    font-family: 'FuturaPT', sans-serif;
+  }
+  
+  .main-container {
+    max-width: 1140px;
+    margin: auto;
+    padding:0 calc-rem(15);
+  }
+  
+  .text-normal {
+    font-family: 'FuturaPT', sans-serif;
+  }
+  
+  .text-medium {
+    font-family: 'FuturaPTMedium', sans-serif;
+  }
+  
+  .text-bold {
+    font-family: 'FuturaPTBold', sans-serif;
+  }
+  
+  img {
+    display: block;
+    margin: auto;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'FuturaPTBold', sans-serif;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .color-primary {
+    color: #FF8D1A;
+  }
+  
+  .color-default {
+    color: #000;
+  }
+  
+  a, a:active, a:focus {
+    color: #FE8D1B;
+    text-decoration: none;
+  }
+  
+  .d {
+    &-flex {
+      display: flex;
+    }
+  }
+  
+  .align {
+    &-items {
+      &-center {
+        align-items: center;
+      }
+    }
+  }
+  
+  .flex {
+    &-column {
+      flex-direction: column;
+    }
+  }
+  
+  .p {
+    &-5 {
+      padding: 0.313rem;
+    }
+  }
+  
+  .m {
+    &r {
+      &-5 {
+        margin-right: 5px;
+      }
+    }
+  }
+  
+  .justify {
+    &-content {
+      &-center {
+        justify-content: center;
+      }
+    }
+  }
+  
+  @keyframes fadeInOpacity {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+  
+  .shine-animate {
+    animation: shimmerBackground 120s linear infinite;
+    background: linear-gradient(90deg,rgba(133,239,49,0) 25.73%,rgba(255,255,255,0.3) 45.27%,rgba(133,239,49,0) 62.27%),#FF8D1A;
+  }
+  
+  @keyframes shimmerBackground {
+    0% { background-position: -5000px 0; }
+    100% { background-position: 5000px 0; }
+  }
+  

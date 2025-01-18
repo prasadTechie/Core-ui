@@ -1,0 +1,151 @@
+body {
+    color: #191919;
+  }
+  
+  .color-5A7184 {
+    color: #5A7184;
+  }
+  
+  .color-fff {
+    color: #fff;
+  }
+  
+  .color-primary {
+    color: #FE8D1B;
+  }
+  
+  .color-1A55AF {
+    color: #1A55AF;
+  }
+  
+  .color-A461D8 {
+    color: #A461D8;
+  }
+  
+  .color-959EAD {
+    color: #959EAD;
+  }
+  
+  .color-1565D8 {
+    color: #1565D8;
+  }
+  
+  .color-E95432 {
+    color: #E95432;
+  }
+  
+  .color {
+    &-5843BE {
+      color: #5843BE;
+    }
+    &-FA5F1C {
+      color: #FA5F1C;
+    }
+    &-0062FF {
+      color: #0062FF;
+    }
+  }
+  
+  .bg-FFECE6 {
+    background: #FFECE6;
+  }
+  
+  .bg-ECF6FF {
+    background: #ECF6FF;
+  }
+  
+  .bg-F6F4FF {
+    background: #F6F4FF;
+  }
+  
+  .bg-FFFBF0 {
+    background: #FFFBF0;
+  }
+  
+  .bg-fff {
+    background: #fff;
+  }
+  
+  .bg-3A4C66 {
+    background: #3A4C66;
+  }
+  
+  .bg-F8F8F8 {
+    background: #F8F8F8;
+  }
+  
+  .bg-primary {
+    background: #FE8D1B;
+  }
+  
+  .bg-primary-lighter {
+    background: #FFF4E8;
+  }
+  
+  .bg-primary-light {
+    background: #E95432;
+  }
+  
+  .bg-dark {
+    background: #000000;
+  }
+  
+  .btn-outline-primary {
+    border: 1px solid #FE8D1B;
+  }
+  
+  .BFS {
+    .btn-outline-primary {
+      border: 2px solid #d9bfdc;
+      border-radius: 60px;
+      background-color: #fff;
+    }
+  }
+  
+  .BFS {
+    .join-class-subtext {
+      color: #813589;
+      position: absolute;
+      bottom: 4px;
+    }
+  }
+  
+  .BFS {
+    a, a:active, a:focus {
+      color: #813589;
+    }
+  }
+  
+  .divider-bg {
+    background: #F1F1F5;
+  }
+  
+  .btn-outline-dark {
+    border: 1px solid #000000;
+  }
+  
+  ::placeholder {
+    color: #959EAD;
+  }
+  
+  .color-183B56 {
+    color:#183B56;
+  }
+  
+  .featured {
+    &-beg {
+      color: #36B37E;
+    }
+  
+    &-int {
+      color: #FD5E34;
+    }
+  
+    &-adv {
+      color:#00B8D9;
+    }
+  
+    &-pro {
+      color:#fec246;
+    }
+  }

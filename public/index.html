@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <link rel="stylesheet" href="/src/assets/styles/global.css" />
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script>
+      var learningTypesTab = document.querySelectorAll(
+        ".learning-type-tab[data-learning-type]"
+      );
+      var learningTypeChildTab = document.querySelectorAll(
+        ".learning-type-child-tab .curriculum__tabs_child-container[data-learning-type]"
+      );
+      var learningTypeSubTab = document.querySelectorAll(
+        ".learning-type-sub-tab .curriculum__tabs-container[data-learning-type]"
+      );
+      var learningTypeBody = document.querySelectorAll(
+        ".curriculum-learning-type-body[data-learning-type]"
+      );
+      var navPackageTabs = document.querySelectorAll(
+        ".headerPricingTab[data-pricing-plan]"
+      );
+      var learningTypeChildTabs = document.querySelectorAll(
+        ".curriculum__tabs_child-container .tab[data-learning-child-plan]"
+      );
+      var packageTabs = document.querySelectorAll(".tab[data-pricing-plan]");
+      var packageTabsContext = document.querySelectorAll(
+        ".curriculum__pricing_tab_context[data-pricing-plan]"
+      );
+      const countryISOcode = "IN";
+
+      if (learningTypesTab.length) {
+        for (var i = 0; i < learningTypesTab.length; i++) {
+          learningTypesTab[i].classList.remove("active");
+        }
+        learningTypeChildTab[0].classList.remove("hide");
+        // learningTypeSubTab[0].classList.remove("hide");
+        // learningTypeBody[0].classList.remove('hide');
+        learningTypesTab[0].classList.add("active");
+      }
+
+      if (learningTypeChildTabs.length) {
+        for (var i = 0; i < learningTypeChildTabs.length; i++) {
+          learningTypeChildTabs[i].classList.remove("active");
+          learningTypeSubTab[i].classList.add("hide");
+          learningTypeBody[i].classList.add("hide");
+        }
+        learningTypeChildTabs[0].classList.add("active");
+        learningTypeSubTab[0].classList.remove("hide");
+        learningTypeBody[0].classList.remove("hide");
+      }
+
+      if (packageTabs.length) {
+        for (var i = 0; i < packageTabs.length; i++) {
+          packageTabs[i].classList.remove("active");
+          packageTabsContext[i].classList.add("hide");
+        }
+        packageTabs[0].classList.add("active");
+        packageTabsContext[0].classList.remove("hide");
+        changeSwitchContainer(
+          packageTabs[0].getAttribute("data-learning-type")
+        );
+      }
+
+      for (var i = 0; i < learningTypeChildTabs.length; i++) {
+        learningTypeChildTabs[i].addEventListener("click", function (e) {
+          childtabChange(
+            this.dataset.learningType,
+            this.dataset.learningChildPlan
+          );
+          if (
+            this.dataset.learningChildPlan === "codingCurriculum" &&
+            countryISOCode === "BR"
+          ) {
+            handleSwitchButton(false, this.dataset.learningChildPlan);
+          } else if (
+            this.dataset.learningChildPlan === "codewithMinecraft" &&
+            countryISOCode === "BR"
+          ) {
+            handleSwitchButton(true, this.dataset.learningChildPlan);
+          }
+        });
+      }
+
+      for (var i = 0; i < packageTabs.length; i++) {
+        packageTabs[i].addEventListener("click", function (e) {
+          tabChange(
+            this.dataset.learningType,
+            this.dataset.pricingPlan,
+            true,
+            this.dataset.learningChildPlan
+          );
+        });
+      }
+
+      for (var i = 0; i < learningTypesTab.length; i++) {
+        learningTypesTab[i].addEventListener("click", function (e) {
+          mainTabChange(this.dataset.learningType);
+        });
+      }
+
+      // Event register on header pricing nav items
+      if (navPackageTabs instanceof NodeList) {
+        for (var i = 0; i < navPackageTabs.length; i++) {
+          navPackageTabs[i].addEventListener("click", function (e) {
+            navChange(this.dataset.pricingPlan);
+          });
+        }
+      }
+
+      document
+        .querySelector(".explore-package a")
+        .addEventListener("click", function (e) {
+          mainTabChange("1:1");
+          childtabChange("1:1", "codewithMinecraft");
+          scrollElem = document.getElementById("course-pricing-start");
+          scrollElem.scrollIntoView();
+          if (countryISOCode === "BR") {
+            handleSwitchButton(true, "codewithMinecraft");
+          }
+        });
+
+      function mainTabChange(learningType) {
+        var learningTypeChildTab = document.querySelectorAll(
+          ".learning-type-child-tab .curriculum__tabs_child-container[data-learning-type]"
+        );
+        var learningTypesTab = document.querySelectorAll(
+          ".learning-type-tab[data-learning-type]"
+        );
+        for (var i = 0; i < learningTypeChildTab.length; i++) {
+          learningTypesTab[i].classList.remove("active");
+          learningTypeChildTab[i].classList.add("hide");
+
+          if (
+            learningTypeChildTab[i].getAttribute("data-learning-type") ===
+            learningType
+          ) {
+            learningTypeChildTab[i].classList.remove("hide");
+            learningTypesTab[i].classList.add("active");
+            changeSwitchContainer(learningType);
+            childtabChange(
+              learningType,
+              learningTypeChildTab[i]
+                .querySelector(".tab")
+                .getAttribute("data-learning-child-plan")
+            );
+          }
+        }
+      }
+
+      function childtabChange(learningType, learningChildType) {
+        var learningChildTabs = document.querySelectorAll(
+          ".learning-type-child-tab .tab[data-learning-child-plan]"
+        );
+        var learningTypeSubTab = document.querySelectorAll(
+          ".learning-type-sub-tab .curriculum__tabs-container[data-learning-child-plan]"
+        );
+        var pricingBody = document.querySelectorAll(
+          ".curriculum__tabs-content .curriculum-learning-type-body[data-learning-child-plan]"
+        );
+
+        for (var i = 0; i < learningChildTabs.length; i++) {
+          learningChildTabs[i].classList.remove("active");
+          learningTypeSubTab[i].classList.add("hide");
+          pricingBody[i].classList.add("hide");
+
+          if (
+            learningType ===
+              learningChildTabs[i].getAttribute("data-learning-type") &&
+            learningChildType ===
+              learningChildTabs[i].getAttribute("data-learning-child-plan")
+          ) {
+            learningChildTabs[i].classList.add("active");
+          }
+          if (
+            learningType ===
+              learningTypeSubTab[i].getAttribute("data-learning-type") &&
+            learningChildType ===
+              learningTypeSubTab[i].getAttribute("data-learning-child-plan")
+          ) {
+            learningTypeSubTab[i].classList.remove("hide");
+            tabChange(
+              learningType,
+              learningTypeSubTab[i]
+                .querySelector(".tab")
+                .getAttribute("data-pricing-plan"),
+              false,
+              learningTypeSubTab[i]
+                .querySelector(".tab")
+                .getAttribute("data-learning-child-plan")
+            );
+          }
+          if (
+            learningType ===
+              pricingBody[i].getAttribute("data-learning-type") &&
+            learningChildType ===
+              pricingBody[i].getAttribute("data-learning-child-plan")
+          ) {
+            pricingBody[i].classList.remove("hide");
+          }
+        }
+      }
+
+      function tabChange(
+        learningType,
+        planId,
+        scrollToSection,
+        learningChildPlan
+      ) {
+        scrollToSection = scrollToSection !== false;
+
+        // If no grade tab available then do nothing
+        const isNavGradeAvailable = document.querySelector(
+          ".learning-type-sub-tab .tab[data-pricing-plan='" +
+            planId +
+            "'][data-learning-type='" +
+            learningType +
+            "'][data-learning-child-plan='" +
+            learningChildPlan +
+            "']"
+        );
+        if (!isNavGradeAvailable) {
+          return false;
+        }
+
+        var packageTabs = document.querySelectorAll(
+          ".learning-type-sub-tab .tab[data-pricing-plan]"
+        );
+        var packageTabsContext = document.querySelectorAll(
+          ".curriculum__pricing_tab_context[data-pricing-plan]"
+        );
+        for (var i = 0; i < packageTabs.length; i++) {
+          packageTabs[i].classList.remove("active");
+          packageTabsContext[i].classList.add("hide");
+
+          if (
+            learningType ===
+              packageTabs[i].getAttribute("data-learning-type") &&
+            planId === packageTabs[i].getAttribute("data-pricing-plan") &&
+            learningChildPlan ===
+              packageTabs[i].getAttribute("data-learning-child-plan")
+          ) {
+            packageTabs[i].classList.add("active");
+          }
+
+          if (
+            learningType ===
+              packageTabsContext[i].getAttribute("data-learning-type") &&
+            planId ===
+              packageTabsContext[i].getAttribute("data-pricing-plan") &&
+            learningChildPlan ===
+              packageTabsContext[i].getAttribute("data-learning-child-plan")
+          ) {
+            packageTabsContext[i].classList.remove("hide");
+          }
+        }
+        // document.querySelector('.tab[data-pricing-plan=' + planId + ']').classList.add('active');
+        // document.querySelector('.curriculum__pricing_tab_context[data-pricing-plan=' + planId + ']').classList.remove('hide');
+        if (scrollToSection) {
+          let scrollElem =
+            document.getElementById("course-pricing-start") ||
+            document.getElementById("curriculum-section");
+          scrollElem.scrollIntoView();
+        }
+      }
+
+      /**
+       * price change from Navigation bar
+       */
+      function navChange(planId, scrollToSection) {
+        var activeLearningTypeTab = document.querySelector(
+          ".learning-type-tab.active"
+        );
+        var learningType = "1:1";
+        var learningChildType = "codingCurriculum";
+        if (activeLearningTypeTab) {
+          learningType =
+            activeLearningTypeTab.getAttribute("data-learning-type");
+        }
+        //Condition - When clicked on APT from “Curriculum + Pricing”, redirect to ‘Solo Class > APT (india)
+        if (countryISOcode === "IN") {
+          if (planId !== "applied-tech") {
+            if (learningType === "1:4") {
+              childtabChange(learningType, learningChildType);
+              tabChange(
+                learningType,
+                planId,
+                scrollToSection,
+                learningChildType
+              );
+            } else {
+              mainTabChange("1:4");
+              childtabChange("1:4", learningChildType);
+              tabChange("1:4", planId, scrollToSection, learningChildType);
+            }
+          } else {
+            mainTabChange("1:1");
+            childtabChange("1:1", learningChildType);
+            tabChange("1:1", planId, scrollToSection, learningChildType);
+          }
+        } else {
+          childtabChange(learningType, learningChildType);
+          tabChange(learningType, planId, scrollToSection, learningChildType);
+        }
+      }
+
+      function handleCurriculumSectionListen() {
+        var hashLocation = window.location.hash;
+
+        if (hashLocation && hashLocation.startsWith("#curriculum-section-")) {
+          const subSection = hashLocation.split("#curriculum-section-")[1];
+          tabChange(subSection);
+        }
+      }
+
+      /**
+       * change the switch container on main menu change
+       */
+      function changeSwitchContainer(selectedLearningType) {
+        var switchElements = document.querySelectorAll(
+          ".curriculum__plan-change"
+        );
+        if (switchElements) {
+          for (var i = 0; i < switchElements.length; i++) {
+            if (
+              switchElements[i].getAttribute("data-learning-type") ===
+              selectedLearningType
+            ) {
+              switchElements[i].classList.remove("hide");
+            }
+            switchElements[i].classList.add("hide");
+          }
+        }
+
+        // check switch button state and show view accordingly (subscription or one time view)
+        if (typeof handleSwitchButton === "function") {
+          const switchContainer = document.querySelector(
+            ".curriculum__plan-change[data-learning-type='" +
+              selectedLearningType +
+              "']"
+          );
+          if (switchContainer) {
+            const switchElement = switchContainer.querySelector(
+              ".curriculum__tabs-switch-input"
+            );
+            handleSwitchButton(switchElement.checked);
+          } else {
+            handleSwitchButton(true);
+          }
+        }
+      }
+
+      handleCurriculumSectionListen();
+    </script>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>

@@ -1,0 +1,394 @@
+@import "./fonts";
+
+#home-footer {
+  position: relative;
+  padding-bottom: 10px;
+  margin: 0 auto 0 auto;
+  background: #FAFAFA;
+  margin-top: 40px;
+}
+
+.footer-container {
+  margin: 0 10px;
+}
+
+.footer-block {
+  width: 100%;
+  display: flex;
+  margin-bottom: 30px;
+}
+.footer-first-separate {
+  width: 40%;
+  margin-right: auto;
+}
+.about-container {
+  margin-bottom: 50px;
+}
+.footer-banner {
+  background: #fff4e8;
+}
+.about-row {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-banner-block {
+  display: flex;
+  align-items: center;
+  padding: 37px;
+  img {
+    width: 185px;
+    position: absolute;
+    top: 0;
+    bottom: 35px;
+  }
+}
+
+.img_container{
+  width: 11.75rem;
+  min-width: 11.75rem;
+  height: 100%;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.footer-feature-container {
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.scroll-top {
+  position: fixed;
+  right: 50px;
+  bottom: 30px;
+  text-align: center;
+  opacity: 0;
+  z-index: 100;
+  transition: opacity 0.5s ease;
+}
+.scroll-circle {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 10px auto;
+  background: #ff8d1a;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.kid-safe {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  color: #5a7184
+}
+
+.kid-seal-coppa {
+  display: inline-block;
+  > img {
+      margin-left:10px;
+      width:80px;
+      height: 30px;
+  }
+}
+
+.footer-feature-block {
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+.feature {
+  display: flex;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  width: 65%;
+  margin: 0 auto;
+  align-items: center;
+
+  @media (max-width: 1190px) {
+    width: 100%;
+  }
+}
+
+h4.feature-text {
+  margin-bottom: 20px;
+}
+
+.footer-another-separate {
+  width: 22%;
+  padding: 15px;
+  padding-top: 0;
+}
+
+.footer-btn {
+  flex-shrink: 0;
+}
+
+ul.pad-0-5 {
+  padding: 0 30px;
+}
+.pad-0-5 {
+  padding: 0 15px;
+}
+
+.ipad-margin {
+  @media (max-width: 1024px) {
+    margin-left: 40px;
+  }
+}
+
+.link {
+  font-size: 1.125rem;
+  color: #5a7184;
+  cursor: pointer;
+  line-height: 36px;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h4.about-title {
+  @extend .font-futura-bold;
+  font-size: 1.125rem;
+  letter-spacing: 0.2px;
+  color: #5a7184;
+}
+h2.about-title {
+  @extend .font-futura-bold;
+  font-size: 1.125rem;
+  letter-spacing: 0.2px;
+  color: #5a7184;
+  padding-bottom: unset;
+  color: #000;
+}
+p.about-desc,
+li.about-desc,
+p.footer-desc,
+.footer-text {
+  font-size: 1.125rem;
+  color: #5a7184;
+  letter-spacing: 0.2px;
+  text-align: justify;
+  line-height: 36px;
+}
+.social-icons {
+  list-style: none;
+  display: flex;
+  width: 50%;
+  margin: 15px 0;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+}
+li.icons-boxes {
+  width: 30px;
+  height: 30px;
+  background: #dadada;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin-right: 0.75rem;
+
+  &:hover {
+    background: #3e3e3e;
+  }
+}
+.margin-auto {
+  margin: 0 auto;
+}
+.copy-right-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  border: 1px solid #e5eaf4;
+  border-left: none;
+  border-right: none;
+}
+
+.whitehat-logo img {
+  margin: 5px;
+  width: 77px;
+}
+
+.business-score-board {
+  width: 107px;
+  height: 63px;
+  background-position: -71px -795px;
+}
+.business-score-board:hover {
+  background-position: -933px -795px;
+	width: 107px;
+  height: 61px;
+  margin-bottom: 2px;
+}
+.cnbc-tv {
+  width: 78px;
+  height: 71px;
+  background-position: -319px -783px;
+}
+.cnbc-tv:hover{
+  background-position:-1181px -783px;
+	width: 78px;
+	height: 71px;
+}
+.your-story {
+  width: 102px;
+  height: 80px;
+  background-position: -534px -788px;
+}
+.your-story:hover{
+  background-position:-1396px -788px;
+	width: 102px;
+	height: 80px;
+}
+.financial-express {
+  width: 124px;
+  height: 114px;
+  background-position: -720px -772px;
+}
+.financial-express:hover{
+  background-position: -1581px -772px;
+	width: 125px;
+  height: 114px;
+  margin-left: -1px;
+}
+
+.tech-crunch {
+  width: 152px;
+  height: 108px;
+  background-position: -49px -935px;
+}
+
+.tech-crunch:hover {
+  background-position: -309px -935px;
+}
+
+
+.facebook-icon {
+  width: 8px;
+  height: 18px;
+  background-position: -67px -674px;
+}
+.twitter-icon {
+  width: 15px;
+  height: 13px;
+  background-position: -106px -676px;
+}
+.youtube-icon {
+  width: 16px;
+  height: 13px;
+  background-position: -147px -677px;
+}
+.linked-icon {
+  width: 16px;
+  height: 17px;
+  background-position: -189px -674px;
+}
+.instagram-icon {
+  width: 15px;
+  height: 20px;
+  background-position: -231px -673px;
+}
+
+.footer-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+
+  .heart {
+    position: relative;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #fd5e34;
+    transform: rotate(45deg);
+    animation: heartbeat 1.2s linear infinite;
+    margin: 0.6rem;
+  }
+
+  .heart:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fd5e34;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+
+  .heart:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fd5e34;
+    transform: translateX(-50%);
+    border-radius: 50%;
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+      transform: rotate(45deg) scale(1);
+  }
+
+  25% {
+      transform: rotate(45deg) scale(1);
+  }
+
+  30% {
+      transform: rotate(45deg) scale(1.4);
+  }
+
+  50% {
+      transform: rotate(45deg) scale(1.2);
+  }
+
+  70% {
+      transform: rotate(45deg) scale(1.4);
+  }
+
+  100% {
+      transform: rotate(45deg) scale(1);
+  }
+}
+
+// .featured_d {
+// //   background: url("../images/featuredInt_d.png");
+// }
+
+.bg-wsj {
+  width: 136px;height: 136px;
+  background-position: -10px -377px;
+}
+.bg-wsj:hover {
+  width: 136px; height: 136px;
+  background-position:  -166px -377px;
+}
+
+.bg-bloomberg {
+  width: 271px; height: 136px;
+  background-position:  -10px -221px;
+}
+.bg-bloomberg:hover {
+  width: 271px; height: 136px;
+  background-position: -301px -221px;
+}
+.bg-techcrunch:hover {
+  width: 342px; height: 191px;
+  background-position:  -372px -10px;
+}
+.bg-techcrunch {
+  width: 342px; height: 191px;
+  background-position:  -10px -10px;
+}
+
+
