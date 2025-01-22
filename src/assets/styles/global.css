@@ -1766,7 +1766,7 @@ input:focus {
 
 .video-preview.BR,
 .video-preview.PT {
-    background-image: url(../images/desktop-home/new-video-banner-br.png)
+    background-image: url('../images/desktop-home/new-video-banner-br.png')
 }
 
 .video-preview.MX {
